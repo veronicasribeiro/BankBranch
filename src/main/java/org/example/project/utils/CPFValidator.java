@@ -30,6 +30,6 @@ public class CPFValidator {
             checkDigit = 0; // Se o dígito for 10 o valor será 0
         }
 
-        return checkDigit;
+        return checkDigit; // Retorna o dígito verificador
     }
 }
