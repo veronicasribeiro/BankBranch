@@ -24,6 +24,12 @@ public class CPFValidator {
             sum += Character.getNumericValue(cpf.charAt(i)) * initialWeight--;
         }
 
-        return sum;
+        // Calcula o primeiro dígito verificador
+        int checkDigit = (sum * 10) % 11;
+        if (checkDigit == 10) {
+            checkDigit = 0; // Se o dígito for 10 o valor será 0
+        }
+
+        return checkDigit;
     }
 }
