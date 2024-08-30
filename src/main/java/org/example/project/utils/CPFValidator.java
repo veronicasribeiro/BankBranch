@@ -16,6 +16,8 @@ public class CPFValidator {
 
     // Cálculo do dígito verificador
     private static int calculateCheckDigit(String cpf, int initialWeight){
-        return 1;
+        // Inicializa a soma para armazenar o resultado do cálculo do dígito verificador
+        int sum = 0;
+        return sum;
     }
 }
