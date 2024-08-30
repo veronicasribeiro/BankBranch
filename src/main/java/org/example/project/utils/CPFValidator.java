@@ -18,6 +18,12 @@ public class CPFValidator {
     private static int calculateCheckDigit(String cpf, int initialWeight){
         // Inicializa a soma para armazenar o resultado do cálculo do dígito verificador
         int sum = 0;
+
+        // Calcula a soma dos produtos dos dígitos do CPF pelo peso correspondente
+        for (int i = 0; i < cpf.length(); i++) {
+            sum += Character.getNumericValue(cpf.charAt(i)) * initialWeight--;
+        }
+
         return sum;
     }
 }
