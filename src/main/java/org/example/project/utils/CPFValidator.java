@@ -3,7 +3,9 @@ package org.example.project.utils;
 public class CPFValidator {
     public static boolean isValidCPF(String cpf) {
 
-        // Lógica de validação será implementada aqui
+        // Remover caracteres não numéricos
+        cpf = cpf.replaceAll("\\D", "");
+
         return false;
     }
 }
