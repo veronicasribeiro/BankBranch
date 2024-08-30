@@ -6,9 +6,9 @@ public class CPFValidator {
         // Remover caracteres não numéricos
         cpf = cpf.replaceAll("\\D", "");
 
-        // Verificar se o CPF tem 11 dígitos
-        if (cpf.length() != 11){
-            return false; // CPF inválido se não tiver 11 dígitos
+        // Verificar se o CPF tem 11 dígitos e se não são todos iguais
+        if (cpf.length() != 11 || cpf.chars().distinct().count() == 1){
+            return false; // CPF inválido se não tiver 11 dígitos ou se todos os dígitos forem iguais
         }
 
         return false;
