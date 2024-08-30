@@ -17,7 +17,9 @@ public class CPFValidator {
         // Calcular o segundo dígito verificador
         int secondDigit = calculateCheckDigit(cpf.substring(0,9) + firstDigit,11);
 
-        return false;
+        // Verificar se os dígitos verificadores estão corretos
+        return firstDigit == Character.getNumericValue(cpf.charAt(9)) &&
+                secondDigit == Character.getNumericValue(cpf.charAt(10));
     }
 
     // Cálculo do dígito verificador
