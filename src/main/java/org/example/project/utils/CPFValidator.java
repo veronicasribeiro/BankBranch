@@ -13,6 +13,11 @@ public class CPFValidator {
 
         // Calcular o primeiro dígito verificador
         int firstDigit = calculateCheckDigit(cpf.substring(0,9),10);
+
+        // Calcular o segundo dígito verificador
+        int secondDigit = calculateCheckDigit(cpf.substring(0,9) + firstDigit,11);
+
+        return false;
     }
 
     // Cálculo do dígito verificador
