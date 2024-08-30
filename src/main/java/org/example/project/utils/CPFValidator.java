@@ -11,7 +11,8 @@ public class CPFValidator {
             return false; // CPF inválido se não tiver 11 dígitos ou se todos os dígitos forem iguais
         }
 
-        return false;
+        // Calcular o primeiro dígito verificador
+        int firstDigit = calculateCheckDigit(cpf.substring(0,9),10);
     }
 
     // Cálculo do dígito verificador
